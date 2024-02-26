@@ -7,7 +7,36 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
+	 <div id="app">
+        <div class="vid-container">
+            <video id="meditationVideo" width="400" height="300" loop>
+                <source src="video/beach.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="player-container">
+            <audio id="meditationAudio" loop>
+                <source src="Sounds/beach.mp3" type="audio/mp3">
+            </audio>
+        </div>
+
+        <div class="sound-picker">
+            <button onclick="changeAudio('Sounds/beach.mp3')">Beach Sound</button>
+            <button onclick="changeAudio('Sounds/rain.mp3')">Rain Sound</button>
+        </div>
+
+        <div id="time-select">
+            <button id="smaller-mins" onclick="setTime(2)">2 Min</button>
+            <button id="medium-mins" onclick="setTime(5)">5 Min</button>
+            <button id="long-mins" onclick="setTime(10)">10 Min</button>
+        </div>
+
+        <div class="time-display" id="time-display">10:00</div>
+
+        <button class="play" onclick="togglePlayPause()">Play</button>
+    </div>
+
+    
     <script type="text/javascript" src="./script.js">
 </script>
 
